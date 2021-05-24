@@ -1,26 +1,26 @@
-//this sets up the variable for slidenumber and
+//this sets up the variable for slideindex and
 //sets its value to 1, so that it starts at the beginning
-var slideNumber = 1;
-showSlides(slideNumber);
+var slideIndex = 0;
+showSlides(slideIndex);
 
 // This controls forward and backwards
 function plusSlides(n) {
-  showSlides(slideNumber += n);
+  showSlides(slideIndex += n);
 }
 
 
 
 // Thumbnail image controls
 function currentSlide(n) {
-  showSlides(slideNumber = n);
+  showSlides(slideIndex = n);
 }
 // this changes the slides based on different conditions
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideNumber = 1}
-  if (n < 1) {slideNumber = slides.length}
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
@@ -29,7 +29,7 @@ function showSlides(n) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
 
-  slides[slideNumber-1].style.display = "block";
+  slides[slideIndex-1].style.display = "block";
   dots[slide-1].className += " active";
 }
 

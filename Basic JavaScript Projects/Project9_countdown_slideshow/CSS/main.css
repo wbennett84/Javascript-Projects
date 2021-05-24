@@ -12,6 +12,12 @@
   display: none;
 }
 
+/* change bg color and prev and next buttons */
+.prev:hover, .next:hover {
+  background-color: rgba(255, 196, 0, 0.8);
+}
+
+
 /* styling for next and previous buttons */
 .prev, .next {
   cursor: pointer;
