@@ -1,6 +1,6 @@
 //this sets up the variable for slideindex and
 //sets its value to 1, so that it starts at the beginning
-var slideIndex = 0;
+var slideIndex = 1;
 showSlides(slideIndex);
 
 // This controls forward and backwards
