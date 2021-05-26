@@ -33,7 +33,7 @@ function placeXOrO(squareNumber) {
       //change the active player to 'X'
       activePlayer = 'X';
     }
-    
+     
 
     //This function plays placement sound.
     audio('./media/place2.mp3');
