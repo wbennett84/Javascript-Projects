@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+
+    <button class="alert">Click here</button>
+    <br>
+    <br>
+    <p id="text1">Hello to you</p>
+<script>
+
+
+
+
+//this appends text into the html document after the html document is loaded
+    $(document).ready(function() {
+        $("html").append(
+            "<body>\
+                <div id='container'>\
+                    <div id='inner'>\
+                        <h1>Basic jQuery</h1>\
+                        <p id='1'>Paragraph 1</p>\
+                        <p id='2'>Paragraph 2</p>\
+                        <p id='3'>Paragraph 3</p>\
+                    </div>\
+                </div>\
+            </body>"
+        );
+        //changes the color of one paragraph and hides the h1 tag when 3rd paragraph is clicked
+        $("#2").css({"color":"red"});
+        $("#3").click(function() {
+            $("h1").hide();
+        })
+    });
+// this will add a comment to the console upon clicking.
+    $( "button.alert" ).on( "click", function() {
+        console.log( "A button with the alert class was clicked!" );
+    });
+//this makes a certain paragraph hide and then show
+        $(document).ready(function() {
+    $("#text1").hide(500).show(500);
+    
+});
+
+    
+
+
+
+
+
+
+</script>
+</body>
+</html>
