@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <p id="XML_Example"></p>
+    <script>
+                
+        var XML_Parser, XML_Document;
+
+        //creates a text string
+        var Movie = "<movie>" +
+            "<title2>Gattaca</title2>" +
+            "<director>Andrew Niccol</director>" +
+            "<starring>Ethan Hawke</starring>" +
+            "<year>1997</year>" +
+            "</movie>";
+        
+        //creates an XML DOM parser
+        XML_Parser = new DOMParser();
+
+        //creates a new XML DOM object using the text string
+        XML_Document = XML_Parser.parseFromString(Movie,"text/xml");
+
+        document.getElementsByTagName("title2")[0].childNodes[0].nodeValue;
+        var movietitle = document.getElementsByTagName("title2");
+        document.write(movietitle);
+    </script>
+</body>
+</html>
