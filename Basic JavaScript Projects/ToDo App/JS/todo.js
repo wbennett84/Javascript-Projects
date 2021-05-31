@@ -38,14 +38,17 @@ function show() {
     /* This displays a task to the list in the order that it is inputed */
     for (var i = 0; i < todos.length; i++) {
     /* This also displays the task as a list and creates the button with the "x" */
-    html += '<li>' + todos[i] + '<button class="remove" id="' + i + '">x</button></li>';
-    
-
-};
-html += '</ul>';
-/* This displays the task as a list */
-document.getElementById('todos').innerHTML = html;
-
+         html += '<li>' + todos[i] + '<button class="remove" id="' + i + '">x</button></li>';
+    };
+    html += '</ul>';
+    /* This displays the task as a list */
+    document.getElementById('todos').innerHTML = html;
+    /* This tells the browser how to display the todo 
+    array after an item has been removed */
+    var buttons = document.getElementsByClassName('remove');
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', remove);
+    };
 }
 /* This displays the inputed task when the 'Add Item' button is clicked */
 document.getElementById('add').addEventListener('click', add);
@@ -65,13 +68,7 @@ function remove() {
     show();
     
 
-    return false;
+
 }
 
 
-/* This tells the browser how to display the todo 
-array after an item has been removed */
-var buttons = document.getElementsByClassName('remove');
-for (var i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', remove);
-};
